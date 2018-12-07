@@ -21,8 +21,19 @@ body {
 main {
 	margin: 1rem;
 	display: grid;
+	grid-template-columns: 1fr;
 	grid-gap: 1rem;
-
+	grid-auto-rows: 4rem;
+}
+main.current {
+	grid-template-columns: 1fr 1fr;
+}
+main.current .detail {
+	grid-row: 1 / -1;
+	grid-column: 2 / 3;
+}
+main.current .list-talk {
+	grid-column: 1 / 2;
 }
 
 .list-talk {

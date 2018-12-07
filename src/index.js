@@ -1,6 +1,5 @@
 import {html, render} from 'lit-html';
 import {repeat} from 'lit-html/directives/repeat';
-import {data} from './data'
 
 const body = document.querySelector("body");
 
@@ -30,8 +29,8 @@ const talkDetail = talk => html`
       -    
       <span class="endTime">${talk.endTime}</span>
   </div>        
-  <span class="difficulty">${(talk.techInfo || {difficulty:'N/A'}).difficulty}</span>    
-  <span class="themes">${(talk.techInfo || {themes:[]}).themes.join(", ")}</span>    
+  <span class="difficulty">${(talk.techInfo || {difficulty: 'N/A'}).difficulty}</span>    
+  <span class="themes">${(talk.techInfo || {themes: []}).themes.join(", ")}</span>    
   <p>${talk.description}</p>    
   <span class="speakers">
     ${repeat(talk.speakers || [], (speaker) => speaker.firstName + '_' + speaker.lastName, speakerDetail)}
