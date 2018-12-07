@@ -14,6 +14,8 @@ body {
 	height: 100vh;
 	background: whitesmoke;
 	color: #222;
+
+	--bof: #00b0ff;
 }
 
 main {
@@ -21,16 +23,20 @@ main {
 	display: grid;
 	grid-gap: 1rem;
 
-	--bof: #00b0ff;
 }
 
 .list-talk {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
+	/*grid-template-rows: auto auto;*/
 	grid-gap: .5rem;
 	grid-template-areas: "start title" "end   subtitle";
 	cursor: pointer;
+	padding: .25rem;
+	border-radius: .25rem;
+}
+.list-talk.active {
+	background: yellow;
 }
 
 .list-talk .startTime, .list-talk .endTime {
