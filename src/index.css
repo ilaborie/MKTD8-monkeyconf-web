@@ -35,6 +35,7 @@ main {
 	padding: .25rem;
 	border-radius: .25rem;
 }
+
 .list-talk.active {
 	background: yellow;
 }
@@ -65,4 +66,67 @@ main {
 }
 
 
+.detail {
+	display: flex;
+	flex-direction: column;
+}
 
+.detail > * {
+	opacity: .75;
+}
+
+.detail .title {
+	background: var(--bof);
+	color: white;
+	font-size: 125%;
+	font-weight: bold;
+	padding: .25rem;
+	border-radius: .25rem;
+
+	opacity: 1;
+}
+
+.detail .when .room {
+	margin-right: 1rem;
+}
+
+.detail .when .room::before {
+	content: 'Room:';
+	margin-right: .25rem;
+	opacity: .5;
+}
+
+.detail .difficulty::before {
+	content: 'Difficulty:';
+	margin-right: .25rem;
+	opacity: .5;
+}
+
+.detail .themes::before {
+	content: 'Themes: ';
+	margin-right: .25rem;
+	opacity: .5;
+}
+
+
+.detail .speakers img {
+	max-height: 2rem;
+
+}
+
+.detail .speakers .speaker {
+	border-top: thin solid rgba(0, 0, 0,0.75);
+	padding-top: .25rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.detail .speakers .speaker img {
+	grid-row: 1 / -1;
+}
+
+p {
+	font-style: italic;
+	background: rgba(0, 0, 0, .1);
+	padding: .25rem;
+}
