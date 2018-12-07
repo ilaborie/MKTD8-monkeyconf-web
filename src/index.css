@@ -22,7 +22,7 @@ main {
 	margin: 1rem;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-gap: 1rem;
+	grid-gap: .5rem;
 	grid-auto-rows: 4rem;
 }
 main.current {
@@ -45,6 +45,11 @@ main.current .list-talk {
 	cursor: pointer;
 	padding: .25rem;
 	border-radius: .25rem;
+}
+
+.list-talk:hover {
+	text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+	background: rgba(0, 0, 0, .05);
 }
 
 .list-talk.active {
@@ -84,6 +89,8 @@ main.current .list-talk {
 
 .detail > * {
 	opacity: .75;
+	font-size: 110%;
+	background: rgba(0, 0, 0, .1);
 }
 
 .detail .title {
@@ -111,6 +118,7 @@ main.current .list-talk {
 	content: 'Difficulty:';
 	margin-right: .25rem;
 	opacity: .5;
+	text-transform: capitalize;
 }
 
 .detail .themes::before {
@@ -122,6 +130,7 @@ main.current .list-talk {
 
 .detail .speakers img {
 	max-height: 2rem;
+	margin-right: 1rem;
 
 }
 

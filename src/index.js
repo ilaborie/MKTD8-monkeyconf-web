@@ -46,7 +46,7 @@ ${state.current ? talkDetail(state.current) : ''}
 const display = state => render(listView(state), body);
 
 const selectTalk = (state, talk) => () =>
-    display({talks: state.talks, current: talk});
+    display({talks: state.talks, current: (state.current === talk) ? null : talk});
 
 fetch('https://monkeyconf.herokuapp.com/')
     .then(res => res.json())
